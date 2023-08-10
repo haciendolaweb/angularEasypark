@@ -1,0 +1,83 @@
+<div id="page-wrapper">
+
+  <!-- Header -->
+    <header id="header">
+      <h1><a href="index.html">easypark</a> Guadalajara</h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="#" class="icon solid fa-angle-down">Opciones</a>
+            <ul>
+              <li><a href="factura.html">Facturación</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="generic.html">Beneficios</a></li>
+            </ul>
+          </li>
+          <li><a href="http://api.whatsapp.com/send?phone=523334579196" class="button">Reservar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <!-- Main -->
+    <section id="main" class="container medium">
+      <header>
+        <h2>Facturación</h2>
+        <p>Tel: 33.3743.0001 / 33.3743.0002 <br> facturacion@easypark.mx</p>
+      </header>
+      <div class="box">
+        <form (ngSubmit)="onSubmit()" name="contacto" id="contacto" [formGroup]="datosFacturacion">
+
+          <div class="row gtr-50 gtr-uniform">
+            <div class="col-6 col-12-mobilep">
+              <input type="text" name="razonS" id="razonS" value="" placeholder="Razón social" [(ngModel)]="datosFacturacion.razonsocial" formControlName="razonsocial" required>
+            </div>
+            <div class="col-6 col-12-mobilep">
+              <input type="text" placeholder="RFC" name="rfc" id="rfc" [(ngModel)]="datosFacturacion.rfc" formControlName="rfc"  required>
+            </div>
+                            <div class="col-12">
+                                <input type="text" placeholder="Domicilio fiscal" name="domicilio" id="domicilio" [(ngModel)]="datosFacturacion.domicilio" formControlName="domicilio"  required>
+            </div>
+            <div class="col-12">
+              <input type="tel" placeholder="Telefono 10 digitos" pattern="[0-9]{10}" name="telefono" id="telefono" [(ngModel)]="datosFacturacion.telefono" formControlName="telefono"  required>
+            </div>
+            <div class="col-12">
+              <input type="email" placeholder="Email" name="email" [(ngModel)]="datosFacturacion.email" formControlName="email" >
+            </div>
+                            <div class="col-12">
+              <input type="number" placeholder="No. Ticket" name="ticket" id="ticket" [(ngModel)]="datosFacturacion.ticket" formControlName="ticket" required>
+            </div>
+                            <div class="col-12">
+              <input type="text" placeholder="Forma de pago (efectivo/tarjeta)" name="formapago" id="formapago" [(ngModel)]="datosFacturacion.formapago" formControlName="formapago"  required>
+            </div>
+                            <div class="col-12">
+              <input type="number" placeholder="Monto pagado" name="montopago" id="montopago" [(ngModel)]="datosFacturacion.montopago" formControlName="montopago" required>
+            </div>
+                            <h2>Revise que los datos sean correctos</h2>
+                            <ngx-recaptcha2
+  [siteKey]="'6Lc5PnMnAAAAANyuQMg9j9e8I_HbnPFSqhp_DiDn'"
+  (success)="onHcaptchaSubmit($event)" [languageCode]="'es'"></ngx-recaptcha2>
+  <br>
+            <div class="col-12">
+              <ul class="actions special">
+                <li><input type="submit" name="enviar" value="Enviar" [disabled]="!captchaResuelto" class="btn btn-primary" (click)="contactoFormSubmitted = true"/></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+            <ul class="icons">
+                <li><a href="http://api.whatsapp.com/send?phone=523334579196" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+                <li><a href="https://www.facebook.com/Easypark-Guadalajara-105510058557295/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="mailto:administracion@easypark.mx" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; easypark airport. Todos los derechos reservados. &copy; agaveintellect</li>
+            </ul>
+        </footer>
+
+</div>
