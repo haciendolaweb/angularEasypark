@@ -13,6 +13,14 @@ export class PanelComponent {
     private router: Router,
   ) {}
 
+  navegarBeneficio() {
+    this.router.navigate(['Beneficios']);
+  }
+
+  navegarContacto() {
+    this.router.navigate(['Contacto']);
+  }
+
   navegarFactura() {
     this.router.navigate(['Facturar']);
   }

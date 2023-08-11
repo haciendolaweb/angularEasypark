@@ -76,6 +76,18 @@ export class FacturacionComponent {
     this.captchaResuelto = true;
     this.captchaToken = event;
   }
+  navegarBeneficio() {
+    this.router.navigate(['Beneficios']);
+  }
+
+  navegarContacto() {
+    this.router.navigate(['Contacto']);
+  }
+
+  navegarFactura() {
+    this.router.navigate(['Facturar']);
+  }
+
   navegarinicio() {
     this.router.navigate(['Home']);
   }

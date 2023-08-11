@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-contacto',
+  templateUrl: './contacto.component.html',
+  styleUrls: ['./contacto.component.css']
 })
-export class AppComponent {
-  title = 'easypark';
+export class ContactoComponent {
 
   constructor(
     private router: Router,
@@ -28,4 +27,5 @@ export class AppComponent {
   navegarinicio() {
     this.router.navigate(['Home']);
   }
+
 }

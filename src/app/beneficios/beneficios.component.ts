@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-beneficios',
+  templateUrl: './beneficios.component.html',
+  styleUrls: ['./beneficios.component.css']
 })
-export class AppComponent {
-  title = 'easypark';
+export class BeneficiosComponent {
 
   constructor(
     private router: Router,

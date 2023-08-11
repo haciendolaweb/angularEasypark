@@ -9,13 +9,17 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { PanelComponent } from './panel/panel.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { BeneficiosComponent } from './beneficios/beneficios.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FacturacionComponent,
-    PanelComponent
+    PanelComponent,
+    ContactoComponent,
+    BeneficiosComponent
   ],
   imports: [
     BrowserModule,
