@@ -254,12 +254,11 @@
   .img1
   {
 
-    background-size: cover;
+    background-size: contain;
     background-image: url('Photos/4.png');
   }
     .img5
   {
-
     background-image: url('images/pic01.png');
     background-size: cover;
   }
@@ -3012,7 +3011,7 @@ background-size: cover;
 	}
 
 	#header {
-		background: #444;
+		background: #5B2D82;
 		color: #bbb;
 		cursor: default;
 		height: 3.25em;
@@ -3078,6 +3077,7 @@ background-size: cover;
 						display: inline-block;
 						text-decoration: none;
 						border: 0;
+						
 					}
 
 						#header nav > ul > li a:not(.button).icon:before {
@@ -3096,6 +3096,7 @@ background-size: cover;
 					#header nav > ul > li .button {
 						margin: 0 0 0 0.5em;
 						position: relative;
+						
 					}
 
 		#header input[type="submit"],
@@ -3237,19 +3238,19 @@ background-size: cover;
 				top: -0.375em;
 				width: 0.75em;
 				z-index: 0;
-			}
+			} 
 
 /* Banner */
 
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("assets/css/images/overlay.png"), url("images/banner.png");
+		background-image: url("assets/css/images/overlay.png"), url("assets/img/banner.png");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
 		color: #fff;
-		padding: 12em 0 20em 0;
+		padding: 8em 0 20em 0;
 		text-align: center;
 	}
 
@@ -3258,7 +3259,7 @@ background-size: cover;
 		}
 
 		#banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
-			color: #fff;
+			color: #000;
 		}
 
 		#banner h2 {
@@ -3269,12 +3270,21 @@ background-size: cover;
 		}
 
 		#banner .logo{
+			width: 100%;
 			color: #40b4e5;
+			align-items: center;
+			z-index: 1;
+		}
+
+		#banner .logo img{
+			width: 80%;
 		}
 
 		#banner p {
 			font-size: 1.25em;
 			margin-bottom: 1.75em;
+			color: #5b2d82;
+			font-weight: bold;
 		}
 
 		#banner input[type="submit"],
