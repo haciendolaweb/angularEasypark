@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PanelComponent {
 
+
   constructor(
     private router: Router,
   ) {}

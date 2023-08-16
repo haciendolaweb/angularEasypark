@@ -1,30 +1,48 @@
 <div id="page-wrapper">
   <!-- Header -->
-    <header id="header">
-      <h1><a (click)="navegarinicio()">easypark</a> Guadalajara</h1>
-      <nav id="nav">
-        <ul>
-          <li><button class="buttonn" (click)="navegarinicio()">Inicio</button></li>
-          <li><button class="buttonn" (click)="navegarFactura()">Facturación</button></li>
-          <li><button class="buttonn"  (click)="navegarContacto()">Contacto</button></li>
-          <li><button class="buttonn"  (click)="navegarBeneficio()">Beneficios</button></li>
-          <li><a href="http://api.whatsapp.com/send?phone=523334579196" target="_blank" class="button">Reservar</a></li>
-        </ul>
-      </nav>
-    </header>
-    <router-outlet></router-outlet>
+  <header id="header">
+    <div class="menu-icon" (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <h1><a (click)="navegarinicio()">easypark</a> Guadalajara</h1>
+    <nav id="nav">
+      <ul class="nav-list" [ngClass]="{'active': isMenuOpen}">
+        <li><button class="buttonn" (click)="navegarinicio()">Inicio</button></li>
+        <li><button class="buttonn" (click)="navegarFactura()">Facturación</button></li>
+        <li><button class="buttonn" (click)="navegarContacto()">Contacto</button></li>
+        <li><button class="buttonn" (click)="navegarBeneficio()">Beneficios</button></li>
+        <li><a href="http://api.whatsapp.com/send?phone=523334579196" target="_blank" class="button">Reservar</a></li>
+      </ul>
+    </nav>
+  </header>
+<div id="header1">
+    <div class="mobile-menu-icon" (click)="toggleMenu()">
+      <div class="menu-bar"></div>
+      <div class="menu-bar"></div>
+      <div class="menu-bar"></div>
+    </div>
+    <nav id="nav">
+      <ul class="mobile-nav-list" [ngClass]="{'active': isMenuOpen}">
+        <li><button class="buttonn" (click)="navegarinicio()">Inicio</button></li>
+        <li><button class="buttonn" (click)="navegarFactura()">Facturación</button></li>
+        <li><button class="buttonn" (click)="navegarContacto()">Contacto</button></li>
+        <li><button class="buttonn" (click)="navegarBeneficio()">Beneficios</button></li>
+        <li><a href="http://api.whatsapp.com/send?phone=523334579196" target="_blank" class="button">Reservar</a></li>
+      </ul>
+    </nav>
+  </div>
+  <router-outlet></router-outlet>
 
-<footer id="footer">
-<ul class="icons">
-  <li><a  target="_blank" href="http://api.whatsapp.com/send?phone=523334579196" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-  <li><a target="_blank" href="https://www.facebook.com/Easypark-Guadalajara-105510058557295/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-  <li><a href="mailto:administracion@easypark.mx" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-</ul>
-<ul class="copyright">
-  <li>&copy; easypark airport. Todos los derechos reservados. &copy; agaveintellect</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-</ul>
-</footer>
-
+  <footer id="footer">
+    <ul class="icons">
+      <li><a target="_blank" href="http://api.whatsapp.com/send?phone=523334579196" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+      <li><a target="_blank" href="https://www.facebook.com/Easypark-Guadalajara-105510058557295/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+      <li><a href="mailto:administracion@easypark.mx" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; easypark airport. Todos los derechos reservados. &copy; agaveintellect</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </footer>
 </div>
-
-
