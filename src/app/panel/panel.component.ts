@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PanelComponent {
 
-
+  
   constructor(
     private router: Router,
   ) {}
@@ -29,4 +29,27 @@ export class PanelComponent {
   navegarinicio() {
     this.router.navigate(['Home']);
   }
+
+  
+}  
+export class CotizacionComponent {
+  llegada: string;
+  salida: string;
+  cotizacion: number;
+
+  constructor() {
+    this.llegada = '';
+    this.salida = '';
+    this.cotizacion = 0;
+  }
+
+  calcularCotizacion(): void {
+    const llegadaDate = new Date(this.llegada);
+    const salidaDate = new Date(this.salida);
+    const diferencia = salidaDate.getTime() - llegadaDate.getTime();
+    const dias = diferencia / (1000 * 60 * 60 * 24);
+    const diasCobrar = Math.ceil(dias);
+    this.cotizacion = diasCobrar * 189;
+  }
 }
+

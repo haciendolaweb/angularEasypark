@@ -253,10 +253,10 @@
 /* Row */
   .img1
   {
-	
+	width: 100%;
     background-size: contain;
 	background-repeat: no-repeat;
-    background-image: url('Photos/4.jpg');
+    background-image: url('Photos/4.png');
   }
     .img5
   {
@@ -2867,6 +2867,10 @@ background-size: cover;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		font-size: large;
+	}
+	.buttonn:hover{
+		color: #40b4e5;
 	}
 
 		input[type="submit"]:hover,

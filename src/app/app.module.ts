@@ -11,6 +11,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 import { PanelComponent } from './panel/panel.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { BeneficiosComponent } from './beneficios/beneficios.component';
+import { CotizacionComponent } from './cotizacion/cotizacion.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { BeneficiosComponent } from './beneficios/beneficios.component';
     FacturacionComponent,
     PanelComponent,
     ContactoComponent,
-    BeneficiosComponent
+    BeneficiosComponent,
+    CotizacionComponent
   ],
   imports: [
     BrowserModule,

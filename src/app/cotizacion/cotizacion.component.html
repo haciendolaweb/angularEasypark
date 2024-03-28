@@ -1,0 +1,22 @@
+<div class="cotizacion-container">
+    
+    <div class="element">
+        <label for="llegada">Fecha y hora de llegada:</label>
+        <input type="datetime-local" [(ngModel)]="llegada" name="llegada" required>
+    </div>
+    
+    <div class="element">
+        <label for="salida">Fecha y hora de salida:</label>
+        <input type="datetime-local" [(ngModel)]="salida" name="salida" required>
+    </div>
+    
+    <div class="element">
+        <button (click)="calcularCotizacion()">Calcular estancia</button>
+    </div>
+    
+    <div class="cotizacion">
+        <label for="cotizacion">Precio Total:</label>
+        <p>{{ cotizacion | currency:'MXN':'symbol':'1.2-2' }}</p>
+    </div>
+</div>
+

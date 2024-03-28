@@ -1,0 +1,53 @@
+/* Estilos para el componente de cotización */
+.cotizacion-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd; /* Color de borde ligero, cámbialo si necesitas */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: white; /* Fondo blanco, cámbialo si necesitas */
+}
+
+.cotizacion-container .element{
+    margin-bottom: .5em;
+}
+
+.cotizacion-container label {
+    margin-bottom: 1em;
+    color: #333; /* Color de texto oscuro para etiquetas */
+}
+
+.cotizacion-container input {
+    margin-bottom: 1em; /* Espaciado entre los campos */
+    padding: 8px;
+    width: 100%; /* Ancho completo para ser responsivo */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    border: 1px solid #ccc; /* Borde ligero para los inputs */
+    border-radius: 3px; /* Bordes redondeados para los inputs */
+    color: #333;
+}
+
+.cotizacion-container button {
+    padding: 10px; 
+    background-color: #5B2D82; /* Color de fondo para el botón */
+    color: white; /* Texto blanco para el botón */
+    font-size: medium bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    text-transform: uppercase; /* Texto en mayúsculas para el botón */
+}
+
+.cotizacion-container button:hover {
+    background-color: #4a2365; /* Color más oscuro para el hover del botón */
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .cotizacion-container {
+        width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+        margin: 10px; /* Menor margen en pantallas pequeñas */
+    }
+}
