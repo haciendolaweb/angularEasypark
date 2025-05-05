@@ -16,30 +16,31 @@ export class CotizacionComponent {
     this.cotizacion = 0;
   }
 
-  // calcularCotizacion(): void {
-  //   const llegadaDate = new Date(this.llegada);
-  //   const salidaDate = new Date(this.salida);
-  //   const diferencia = salidaDate.getTime() - llegadaDate.getTime();
-  //   const dias = diferencia / (1000 * 60 * 60 * 24);
-  //   const diasCobrar = Math.ceil(dias);
-  //   this.cotizacion = diasCobrar * 210;
-  // }
   calcularCotizacion(): void {
     const llegadaDate = new Date(this.llegada);
     const salidaDate = new Date(this.salida);
     const diferencia = salidaDate.getTime() - llegadaDate.getTime();
-    const dias = diferencia / (1000 * 60 * 60 * 24);
-    const diasCobrar = Math.ceil(dias);
-  
-    // Definir la tarifa regular y el descuento
+    const horas = diferencia / (1000 * 60 * 60);
+    const diasCobrar = Math.ceil(horas / 24);
+    let subtotal = 0;
     const tarifaRegular = 210;
     const descuentoPorSemana = 170;
-  
-    // Calcular cuántas semanas completas están incluidas
-    const semanasCompletas = Math.floor(dias / 7);
-  
-    // Calcular la cotización total
-    this.cotizacion = (diasCobrar * tarifaRegular) - (semanasCompletas * descuentoPorSemana);
+
+    for (let hora = 0; hora < horas; hora++) {
+      // Aplicar tarifa regular y ajuste por cada hora
+      subtotal += tarifaRegular + 30;
+
+      // Reiniciar las horas al final de cada día y aplicar ajustes especiales cada 7 días
+      if ((hora + 1) % 24 === 0) {
+        if (diasCobrar % 7 === 0 && diasCobrar !== 0) {
+          subtotal += 180; // Ajuste especial por cada semana
+        }
+        hora = 23; // Avanza directamente al final del día
+      }
+    }
+
+    // Calcular el descuento por semanas completas y ajustar la cotización final
+    const semanasCompletas = Math.floor(diasCobrar / 7);
+    this.cotizacion = subtotal - semanasCompletas * descuentoPorSemana;
   }
-  
 }
